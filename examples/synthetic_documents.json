@@ -1,0 +1,13 @@
+[
+  {"document_id":"doc-software","vendor":"CloudNine Tools","date":"2026-06-02","amount":"49.00","filename":"CloudNine-Tools-2026-06-02-$49.00.pdf"},
+  {"document_id":"doc-workshop","vendor":"Juniper Learning Co","date":"2026-06-04","amount":"1250.00","filename":"Juniper-Learning-Co-2026-06-04-$1250.00.pdf"},
+  {"document_id":"doc-invoice-paid","vendor":"Sparkline Works","date":"2026-06-09","amount":"600.00","filename":"Sparkline-Works-2026-06-09-$600.00.pdf"},
+  {"document_id":"doc-owner-expense","vendor":"Desk Garden","date":"2026-06-10","amount":"86.50","filename":"Desk-Garden-2026-06-10-$86.50.pdf"},
+  {"document_id":"doc-travel","vendor":"Trailway Transit","date":"2026-06-11","amount":"140.00","filename":"Trailway-Transit-2026-06-11-$140.00.pdf"},
+  {"document_id":"doc-asset","vendor":"Northstar Equipment","date":"2026-06-12","amount":"2000.00","filename":"Northstar-Equipment-2026-06-12-$2000.00.pdf"},
+  {"document_id":"doc-mileage","vendor":"Scenario Mileage Log","date":"2026-06-17","amount":"0.00","filename":"Scenario-Mileage-Log-2026-06-17.pdf"},
+  {"document_id":"doc-mixed","vendor":"Everyday Market","date":"2026-06-20","amount":"80.00","filename":"Everyday-Market-2026-06-20-$80.00.pdf"},
+  {"document_id":"doc-cash","vendor":"Cedar Print House","date":"2026-06-29","amount":"32.00","filename":"Cedar-Print-House-2026-06-29-$32.00.pdf"},
+  {"document_id":"doc-owner-pending","vendor":"Paper Lantern Studio","date":"2026-06-27","amount":"75.00","filename":"Paper-Lantern-Studio-2026-06-27-$75.00.pdf"},
+  {"document_id":"doc-orphan","vendor":"Paper Lantern Studio","date":"2026-06-26","amount":"22.00","filename":"Paper-Lantern-Studio-2026-06-26-$22.00.pdf"}
+]

@@ -1,0 +1,16 @@
+transaction_id,date,counterparty,amount,direction,description,payment_source,document_type,document_ref,document_status,business_use,business_use_percent,linked_transaction_id,invoice_id,financing_source,mileage_miles
+tx-software,2026-06-02,CloudNine Tools,49.00,outflow,Monthly software subscription,Business Credit Card,receipt,doc-software,Saved,full,,, ,,
+tx-office,2026-06-03,Paper Orbit,210.00,outflow,Office supplies for studio,Business Checking,receipt,,Missing,full,,,,,
+tx-workshop,2026-06-04,Juniper Learning Co,1250.00,inflow,Client payment for workshop,Business Checking,invoice,doc-workshop,Saved,full,,,,,
+tx-invoice-paid,2026-06-09,Sparkline Works,600.00,inflow,Client payment invoice INV-SYN-102,Business Checking,invoice,doc-invoice-paid,Saved,full,,,INV-SYN-102,,
+tx-owner-expense,2026-06-10,Desk Garden,86.50,outflow,Business supplies paid personally,Owner Personal,receipt,doc-owner-expense,Saved,full,,,,,
+tx-travel,2026-06-11,Trailway Transit,140.00,outflow,Train travel to workshop,Business Credit Card,receipt,doc-travel,Saved,full,,,,,
+tx-asset,2026-06-12,Northstar Equipment,2000.00,outflow,Equipment asset purchase laptop financed,Business Checking,invoice,doc-asset,Saved,full,,,,Northstar Fictional Finance,
+tx-transfer,2026-06-15,Scenario Reserve,300.00,outflow,Transfer to business reserve account,Business Checking,, ,Not Needed,full,,,,,
+tx-mileage,2026-06-17,Scenario Mileage Log,,noncash,Business mileage to workshop venue,Other,mileage_log,doc-mileage,Saved,full,,,,,24
+tx-mixed,2026-06-20,Everyday Market,80.00,outflow,Mixed personal and business purchase,Joint Personal,receipt,doc-mixed,Saved,mixed,,,,,
+tx-software-copy,2026-06-02,CloudNine Tools,49.00,outflow,Monthly software subscription,Business Credit Card,receipt,doc-software,Saved,full,,,,,
+tx-owner-reimbursement,2026-06-18,Desk Garden,86.50,outflow,Owner reimbursement payout for tx-owner-expense,Business Checking,,,Not Needed,full,,tx-owner-expense,,,
+tx-finance-payment,2026-06-25,Northstar Equipment Finance,125.00,outflow,Financing payment for tx-asset,Business Checking,,,Not Needed,full,,tx-asset,,Northstar Fictional Finance,
+tx-cash-expense,2026-06-29,Cedar Print House,32.00,outflow,Printed workshop handouts,Cash,receipt,doc-cash,Saved,full,,,,,
+tx-owner-pending,2026-06-27,Paper Lantern Studio,75.00,outflow,Workshop supplies paid personally awaiting reimbursement,Co-owner Personal,receipt,doc-owner-pending,Saved,full,,,,,

@@ -1,0 +1,19 @@
+flowchart TD
+    A[Synthetic financial records: CSV] --> N[Normalization]
+    DOC[Synthetic document metadata] --> DM[Document matching]
+    INV[Invoice register] --> IV[Invoice/payment validation]
+    N --> C[Rule-based classification]
+    C --> V[Validation]
+    V -->|clear| AUTO[Accepted]
+    V -->|material ambiguity| REVIEW[Human review]
+    AUTO --> L[Ledger view]
+    REVIEW --> L
+    ASSET[Asset acquisition and financing links] --> L
+    OWNER[Owner-paid expense and reimbursement link] --> L
+    MILEAGE[Mileage log] --> L
+    IV --> L
+    L --> DM
+    A --> R[Statement reconciliation]
+    L --> R
+    R --> S[Monthly summary]
+    S --> AUD[Audit trail]

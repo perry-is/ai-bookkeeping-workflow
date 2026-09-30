@@ -1,0 +1,4 @@
+[
+  {"invoice_id":"INV-SYN-102","counterparty":"Sparkline Works","amount":"600.00","status":"Paid","issued_date":"2026-06-01","due_date":"2026-06-15","paid_date":"2026-06-09","income_transaction_id":"tx-invoice-paid"},
+  {"invoice_id":"INV-SYN-103","counterparty":"Juniper Learning Co","amount":"900.00","status":"Sent","issued_date":"2026-06-12","due_date":"2026-06-30","paid_date":"","income_transaction_id":""}
+]

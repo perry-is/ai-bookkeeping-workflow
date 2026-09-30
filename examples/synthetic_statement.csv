@@ -1,0 +1,13 @@
+statement_id,date,counterparty,amount,direction,payment_source,description
+st-001,2026-06-02,CloudNine Tools,49.00,outflow,Business Credit Card,Monthly software subscription
+st-002,2026-06-03,Paper Orbit,210.00,outflow,Business Checking,Office supplies for studio
+st-003,2026-06-04,Juniper Learning Co,1250.00,inflow,Business Checking,Client payment for workshop
+st-004,2026-06-09,Sparkline Works,600.00,inflow,Business Checking,Client payment invoice INV-SYN-102
+st-005,2026-06-10,Desk Garden,86.50,outflow,Owner Personal,Business supplies paid personally
+st-006,2026-06-11,Trailway Transit,140.00,outflow,Business Checking,Train travel to workshop
+st-007,2026-06-12,Northstar Equipment,2000.00,outflow,Business Checking,Equipment asset purchase laptop financed
+st-008,2026-06-15,Scenario Reserve,300.00,outflow,Business Checking,Transfer to business reserve account
+st-009,2026-06-18,Desk Garden,86.50,outflow,Business Checking,Owner reimbursement payout for tx-owner-expense
+st-010,2026-06-20,Everyday Market,80.00,outflow,Joint Personal,Mixed personal and business purchase
+st-011,2026-06-25,Northstar Equipment Finance,125.00,outflow,Business Checking,Financing payment for tx-asset
+st-012,2026-06-30,Juniper Learning Co,300.00,inflow,Business Checking,Client payment for consulting
