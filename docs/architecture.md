@@ -4,7 +4,7 @@
 
 1. **Intake:** read the built-in synthetic transaction CSV, statement CSV, document metadata JSON, and invoice register JSON.
 2. **Normalization:** convert dates and currency strings into typed Python values, normalize whitespace, validate enums, and preserve optional source references.
-3. **Classification:** apply explicit deterministic rules to select an operational transaction type/category and explain the rule used. No model call occurs.
+3. **Classification:** apply explicit deterministic rules to select an operational transaction type/category and explain the rule used. By default no model call occurs.
 4. **Validation:** require facts needed for a material decision; flag mixed-use or unclear business use without inventing a percentage.
 5. **Ledger view:** retain each normalized transaction exactly once and add classification, document, and review metadata.
 6. **Evidence and reconciliation:** match document references, compare ledger records to statement rows, and flag duplicates, source mismatches, and unmatched records.
@@ -16,7 +16,7 @@
 - **Classification:** transaction type and category describe operational bookkeeping workflow only.
 - **Tax treatment:** not implemented. No deduction, depreciation, Section 179, tax allocation, or filing decision is inferred.
 - **Human review:** required when missing facts can materially affect the operational classification or where records disagree.
-- **AI extension point:** the `Classifier` protocol can later accept a model-backed implementation. Model output would need schema validation, provenance, and the same review gates. The demo uses `RuleBasedClassifier` only.
+- **AI assistance (optional):** `AssistedClassifier` wraps the rules. Only when the rules cannot assign a category does it ask a model (mock or local Ollama) for a suggestion. The reply must exactly match an allowed category, is stored in a separate `ai_suggestion` field, and the item stays in human review. The demo stops at the review queue: there is no accept/reject action, so suggestions never enter accepted totals. A production workflow would require explicit human acceptance before a suggestion becomes the canonical category.
 
 ## Reconciliation keys
 

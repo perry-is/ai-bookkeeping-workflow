@@ -18,3 +18,4 @@ Run `bookkeeping-demo` to calculate the full result and audit trail.
 - The summary reports nine review questions across ambiguity, missing evidence, duplicates, source mismatch, unmatched records, orphan evidence, and reimbursement follow-up.
 
 These are workflow outputs from fictional inputs, not tax or accounting advice.
+- Optional: with `--assist`, the mixed-use purchase also carries an AI category suggestion. It stays in review and totals are unchanged.
