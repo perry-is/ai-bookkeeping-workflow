@@ -4,7 +4,7 @@ The rules run first. Only when they can't find a category does the model get
 asked, and only for that one transaction. Its answer is checked against the
 list of allowed categories, attached to the record as a labeled suggestion, and
 the record stays in the human review queue. Model output is not a bookkeeping
-fact until a person accepts it.
+fact. This demo has no accept action; a production workflow would need one.
 """
 
 from __future__ import annotations

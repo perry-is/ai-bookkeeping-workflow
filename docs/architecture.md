@@ -16,7 +16,7 @@
 - **Classification:** transaction type and category describe operational bookkeeping workflow only.
 - **Tax treatment:** not implemented. No deduction, depreciation, Section 179, tax allocation, or filing decision is inferred.
 - **Human review:** required when missing facts can materially affect the operational classification or where records disagree.
-- **AI assistance (optional):** `AssistedClassifier` wraps the rules. Only when the rules cannot assign a category does it ask a model (mock or local Ollama) for a suggestion. The reply must exactly match an allowed category, is stored in a separate `ai_suggestion` field, and the item stays in human review. Totals never include an unaccepted suggestion.
+- **AI assistance (optional):** `AssistedClassifier` wraps the rules. Only when the rules cannot assign a category does it ask a model (mock or local Ollama) for a suggestion. The reply must exactly match an allowed category, is stored in a separate `ai_suggestion` field, and the item stays in human review. The demo stops at the review queue: there is no accept/reject action, so suggestions never enter accepted totals. A production workflow would require explicit human acceptance before a suggestion becomes the canonical category.
 
 ## Reconciliation keys
 

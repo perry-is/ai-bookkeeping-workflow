@@ -54,12 +54,14 @@ flowchart LR
     V -->|yes| H[Human review queue<br/>with suggestion attached]
     V -->|no| H2[Human review queue<br/>suggestion rejected]
     A --> S[Monthly summary]
-    H -. only after a person accepts .-> S
+    H --> Q[Stops here:<br/>unresolved, excluded from totals]
+    H2 --> Q
 ```
 
 - **Rules go first.** The model is only consulted for transactions the rules can't categorize. In the demo month, that's 1 of 15.
 - **The model's answer is checked.** It must be exactly one of the allowed categories. Anything else ("Groceries, probably") is rejected and noted.
-- **A suggestion is not a fact.** It's stored in its own field, labeled, and the item stays in review. Totals don't change until a person accepts it.
+- **A suggestion is not a fact.** It's stored in its own field, labeled, and the item stays in review. The `category` field stays empty, and the item is excluded from accepted totals.
+- **The public demo stops at the review queue.** AI suggestions never enter accepted totals automatically. A production workflow would need an explicit human accept/reject step before a suggestion becomes the record's category. That step isn't built here.
 - **The model sees only what it needs:** vendor, description, and amount. No payment source, account, or document details.
 - **If the model is offline, nothing breaks.** The workflow falls back to rules only and notes that no suggestion was available.
 
