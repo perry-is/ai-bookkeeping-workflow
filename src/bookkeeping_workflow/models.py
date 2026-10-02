@@ -137,6 +137,7 @@ class Classification:
     rule: str
     review_required: bool = False
     review_reasons: tuple[str, ...] = ()
+    ai_suggestion: str | None = None  # unverified; never counted until a person accepts it
 
 
 @dataclass(frozen=True)

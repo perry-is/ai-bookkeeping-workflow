@@ -6,6 +6,7 @@ import argparse
 from decimal import Decimal
 from pathlib import Path
 
+from .assist import AssistedClassifier, MockModel, OllamaModel
 from .audit import write_jsonl
 from .workflow import run_workflow
 
@@ -69,8 +70,19 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Run the synthetic bookkeeping workflow.")
     parser.add_argument("--no-audit-file", action="store_true", help="print results without writing local JSONL audit")
     parser.add_argument("--audit-path", type=Path, default=Path(".local/audit.jsonl"))
+    parser.add_argument(
+        "--assist", choices=("off", "mock", "ollama"), default="off",
+        help="ask a model to suggest categories the rules couldn't assign (suggestions always go to review)",
+    )
+    parser.add_argument("--model", default="qwen2.5:3b", help="local Ollama model for --assist ollama")
+    parser.add_argument("--ollama-url", default="http://localhost:11434")
     args = parser.parse_args()
-    result = run_workflow()
+    classifier = None
+    if args.assist == "mock":
+        classifier = AssistedClassifier(MockModel())
+    elif args.assist == "ollama":
+        classifier = AssistedClassifier(OllamaModel(args.model, args.ollama_url))
+    result = run_workflow(classifier=classifier)
     audit_path = None if args.no_audit_file else args.audit_path
     if audit_path:
         write_jsonl(audit_path, result.audit_events)

@@ -36,6 +36,7 @@ def build_audit_events(
                 "transaction_type": entry.classification.transaction_type.value,
                 "category": entry.classification.category,
                 "rule": entry.classification.rule,
+                "ai_suggestion": entry.classification.ai_suggestion,
             },
             "human_review_required": entry.classification.review_required,
             "review_reasons": list(entry.classification.review_reasons),
